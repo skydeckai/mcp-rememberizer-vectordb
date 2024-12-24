@@ -32,11 +32,6 @@ client = APIClient(
 )
 
 
-async def async_wrapper():
-    results = await client.get(ME_VECTOR_STORE_PATH)
-    return results
-
-
 async def serve() -> Server:
 
     response = await client.get(ME_VECTOR_STORE_PATH)
