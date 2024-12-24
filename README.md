@@ -1,16 +1,63 @@
 # MCP Get Community Servers
 
-TODO: Add description
+A [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) server for LLMs to interact with Rememberizer Vector Store. See more at: [docs.rememberizer.ai](https://docs.rememberizer.ai/)
 
 ## Components
 
 ### Resources
 
-The server provides access to two types of resources: Documents or Slack discussions
+The server provides access to your Vector Store's documents.
 
 ### Tools
 
-TODO: Add tools
+1. `rememberizer_vectordb_search`
+
+   - Search for documents in your Vector Store by semantic similarity
+   - Input:
+     - `q` (string): Up to a 400-word sentence to find semantically similar chunks of knowledge
+     - `n` (integer, optional): Number of similar documents to return (default: 5)
+
+2. `rememberizer_vectordb_agentic_search`
+
+   - Search for documents in your Vector Store by semantic similarity with LLM Agents augmentation
+   - Input:
+     - `query` (string): Up to a 400-word sentence to find semantically similar chunks of knowledge. This query can be augmented by our LLM Agents for better results.
+     - `n_chunks` (integer, optional): Number of similar documents to return (default: 5)
+     - `user_context` (string, optional): The additional context for the query. You might need to summarize the conversation up to this point for better context-awared results (default: None)
+
+3. `rememberizer_vectordb_list_documents`
+
+   - Retrieves a paginated list of all documents
+   - Input:
+     - `page` (integer, optional): Page number for pagination, starts at 1 (default: 1)
+     - `page_size` (integer, optional): Number of documents per page, range 1-1000 (default: 100)
+   - Returns: List of documents
+
+4. `rememberizer_vectordb_information`
+
+   - Get information of your Vector Store
+   - Input: None required
+   - Returns: Vector Store information details
+
+5. `rememberizer_vectordb_create_document`
+
+   - Create a new document for your Vector Store
+   - Input:
+     - `text` (string): The content of the document
+     - `document_name` (integer, optional): A name for the document
+
+6. `rememberizer_vectordb_delete_document`
+
+   - Delete a document from your Vector Store
+   - Input:
+     - `document_id` (integer): The ID of the document you want to delete
+
+7. `rememberizer_vectordb_modify_document`
+
+   - Change the name of your Vector Store document
+   - Input:
+     - `document_id` (integer): The ID of the document you want to modify
+
 
 ## Installation
 
