@@ -21,7 +21,7 @@ CREATE_DOCUMENT_PATH = "vector-stores/{vector_store_id}/documents/create"
 class VectorStoreTools(Enum):
     SEARCH = "rememberizer_vectordb_search"
     AGENTIC_SEARCH = "rememberizer_vectordb_agentic_search"
-    VECTOR_DATABASE_INFORMATION = "rememberizer_vectordb_account_information"
+    VECTOR_DATABASE_INFORMATION = "rememberizer_vectordb_information"
     LIST_DOCUMENTS = "rememberizer_vectordb_list_documents"
     CREATE_DOCUMENT = "rememberizer_vectordb_create_document"
     DELETE_DOCUMENT = "rememberizer_vectordb_delete_document"
