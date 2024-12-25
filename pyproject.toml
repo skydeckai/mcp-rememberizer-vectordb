@@ -1,7 +1,7 @@
 [project]
 name = "mcp-rememberizer-vectordb"
 version = "0.1.1"
-description = "A Model Context Protocol server for interacting with Rememberizer Vector Store."
+description = "A Model Context Protocol server for interacting with Rememberizer Vector Store (https://docs.rememberizer.ai/developer/vector-stores)."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

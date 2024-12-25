@@ -1,12 +1,12 @@
 # MCP Get Community Servers
 
-A [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) server for LLMs to interact with Rememberizer Vector Store. See more at: [docs.rememberizer.ai](https://docs.rememberizer.ai/)
+A [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) server for LLMs to interact with [Rememberizer Vector Store](https://docs.rememberizer.ai/developer/vector-stores).
 
 ## Components
 
 ### Resources
 
-The server provides access to your Vector Store's documents.
+The server provides access to your Vector Store's documents in [Rememberizer](https://docs.rememberizer.ai/).
 
 ### Tools
 
