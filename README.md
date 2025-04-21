@@ -107,4 +107,3 @@ Add the env `REMEMBERIZER_VECTOR_STORE_API_KEY` to `mcp-rememberizer-vectordb`.
 This MCP server is licensed under the [Apache License 2.0](LICENSE). This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the Apache License. For more details, please see the [LICENSE](LICENSE) file in the project repository.
 
 
-[![Verified on MseeP](https://mseep.ai/badge.svg)](https://mseep.ai/app/f6d53ed7-a319-4a86-a2c3-f540a6227548)
