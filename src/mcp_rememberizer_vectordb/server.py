@@ -84,7 +84,7 @@ async def serve() -> Server:
                             "semantically similar chunks of knowledge.",
                         },
                         "n": {
-                            "type": "integer",
+                            "type": "number",
                             "description": (
                                 "Number of semantically similar chunks of text to return. "
                                 "Use 'n_results=3' for up to 5, and 'n_results=10' for more information. "
@@ -119,7 +119,7 @@ async def serve() -> Server:
                             ),
                         },
                         "n_chunks": {
-                            "type": "integer",
+                            "type": "number",
                             "description": (
                                 "Number of semantically similar chunks of text to return. "
                                 "Use 'n_results=3' for up to 5, and 'n_results=10' for more information. "
@@ -145,13 +145,13 @@ Examples:
                     "type": "object",
                     "properties": {
                         "page": {
-                            "type": "integer",
+                            "type": "number",
                             "description": "Page number for pagination (starts at 1)",
                             "minimum": 1,
                             "default": 1,
                         },
                         "page_size": {
-                            "type": "integer",
+                            "type": "number",
                             "description": "Number of documents per page (1-1000)",
                             "minimum": 1,
                             "maximum": 1000,
@@ -185,7 +185,7 @@ Examples:
                     "type": "object",
                     "properties": {
                         "document_id": {
-                            "type": "int",
+                            "type": "number",
                             "description": "The id of the document you want to delete.",
                         },
                     },
@@ -199,7 +199,7 @@ Examples:
                     "type": "object",
                     "properties": {
                         "document_id": {
-                            "type": "int",
+                            "type": "number",
                             "description": "The id of the document you want to delete.",
                         },
                         "document_name": {
