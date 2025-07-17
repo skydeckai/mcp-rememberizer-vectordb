@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/eastern_cottontail_ywqczz.jpg)](https://mseep.ai/app/skydeckai-mcp-rememberizer-vectordb)
+
 # Rememberizer Vector Store MCP Server
 
 A [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) server for LLMs to interact with [Rememberizer Vector Store](https://docs.rememberizer.ai/developer/vector-stores).
