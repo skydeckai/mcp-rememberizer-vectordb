@@ -1,5 +1,3 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/eastern_cottontail_ywqczz.jpg)](https://mseep.ai/app/skydeckai-mcp-rememberizer-vectordb)
-
 # Rememberizer Vector Store MCP Server
 
 A [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol) server for LLMs to interact with [Rememberizer Vector Store](https://docs.rememberizer.ai/developer/vector-stores).
@@ -62,15 +60,15 @@ The server provides access to your Vector Store's documents in [Rememberizer](ht
 
 ## Installation
 
-**Via mcp-get.com:** Use mcp-get command to automatically set up the Rememberizer MCP Vector Store MCP Server.
+**Manual Installation:** Use uvx command to install the Rememberizer Vector Store MCP Server.
 
 ```bash
-npx @michaellatman/mcp-get@latest install mcp-rememberizer-vectordb
+uvx mcp-rememberizer-vectordb
 ```
 
-**Via SkyDeck AI Helper App:** If you have SkyDeck AI Helper app installed, you can search for "Rememberizer" and install the mcp-rememberizer-vectordb.
+**Via MseeP AI Helper App:** If you have MseeP AI Helper app installed, you can search for "Rememberizer VectorDb" and install the mcp-rememberizer-vectordb.
 
-![SkyDeck AI Helper App installation](https://docs.rememberizer.ai/~gitbook/image?url=https%3A%2F%2F2952947711-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyNqpTh7Mh66N0RnO0k24%252Fuploads%252FFNtwkzA6eyC1yDrmOqjv%252Fimage.png%3Falt%3Dmedia%26token%3Dccb0dd6a-dde5-41a4-b148-cbc11ddcf5a9&width=768&dpr=2&quality=100&sign=839d22ba&sv=2)
+![MseeP AI Helper App](https://www.gitbook.com/cdn-cgi/image/dpr=2,width=760,onerror=redirect,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyNqpTh7Mh66N0RnO0k24%252Fuploads%252F57zmQtY3EjOCl5vzsKW4%252FScreenshot%25202025-07-29%2520at%252015.14.07.png%3Falt%3Dmedia%26token%3D0cb19fc4-d430-4a48-8c63-6bb9051c01ee)
 
 ## Configuration
 
@@ -98,14 +96,12 @@ Add this to your `claude_desktop_config.json`:
 }
 ```
 
-## Usage with SkyDeck AI Helper App
+## Usage with MseeP AI Helper App
 
 Add the env `REMEMBERIZER_VECTOR_STORE_API_KEY` to `mcp-rememberizer-vectordb`.
 
-![SkyDeck AI Helper App Configuration](https://docs.rememberizer.ai/~gitbook/image?url=https%3A%2F%2F2952947711-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyNqpTh7Mh66N0RnO0k24%252Fuploads%252FaaRJQXKzlN8o4jEW5y17%252Fimage.png%3Falt%3Dmedia%26token%3Dd0641bd9-082e-46c9-a1f6-4c4d4de9b144&width=768&dpr=2&quality=100&sign=c5a1c835&sv=2)
+![MseeP AI Helper App Configuration](https://www.gitbook.com/cdn-cgi/image/dpr=2,width=760,onerror=redirect,format=auto/https%3A%2F%2Ffiles.gitbook.com%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FyNqpTh7Mh66N0RnO0k24%252Fuploads%252FtvMRtRRYOv3d4Ud3oI1U%252FScreenshot%25202025-07-29%2520at%252015.16.16.png%3Falt%3Dmedia%26token%3D83fdb837-ef9d-47bd-bd7e-7795a90bb284)
 
 ## License
 
-This MCP server is licensed under the [Apache License 2.0](LICENSE). This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the Apache License. For more details, please see the [LICENSE](LICENSE) file in the project repository.
-
-
+This MCP server is licensed under the [Apache License 2.0](LICENSE).
