@@ -1,11 +1,20 @@
 import json
 import logging
 import os
+import re
 
 import mcp.server.stdio
 import mcp.types as types
 from mcp.server import Server
 from pydantic import AnyUrl
+
+_DOCUMENT_ID_RE = re.compile(r"\A[0-9a-fA-F-]{1,64}\Z")
+
+
+def _validate_document_id(value: str) -> str:
+    if not _DOCUMENT_ID_RE.match(value or ""):
+        raise ValueError(f"Invalid document_id: {value!r}")
+    return value
 
 from mcp_rememberizer_vectordb.utils import (
     AGENTIC_SEARCH_PATH,
@@ -54,7 +63,7 @@ async def serve() -> Server:
 
     @server.read_resource()
     async def read_resource(uri: AnyUrl) -> str:
-        document_id = uri.path.lstrip("/")
+        document_id = _validate_document_id(uri.path.lstrip("/"))
         data = await client.get(
             DOCUMENT_PATH.format(
                 vector_store_id=vector_store_id, document_id=document_id
@@ -261,7 +270,7 @@ Examples:
                 )
                 return [types.TextContent(type="text", text=str(data))]
             case VectorStoreTools.DELETE_DOCUMENT.value:
-                document_id = arguments.get("document_id")
+                document_id = _validate_document_id(str(arguments.get("document_id", "")))
                 data = await client.delete(
                     DOCUMENT_PATH.format(
                         vector_store_id=vector_store_id, document_id=document_id
@@ -269,7 +278,7 @@ Examples:
                 )
                 return [types.TextContent(type="text", text=str(data))]
             case VectorStoreTools.MODIFY_DOCUMENT.value:
-                document_id = arguments.get("document_id")
+                document_id = _validate_document_id(str(arguments.get("document_id", "")))
                 params = {
                     k: v
                     for k, v in {

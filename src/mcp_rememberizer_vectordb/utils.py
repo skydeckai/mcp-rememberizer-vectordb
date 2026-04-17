@@ -37,7 +37,6 @@ class APIClient:
                 "Content-Type": "application/json",
                 "X-API-Key": api_key,
             },
-            verify=False,
         )
 
     async def get(self, path: str, params: dict = None):
